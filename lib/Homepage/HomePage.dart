@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 40,
           ),
           Align(
             alignment: Alignment.center,
