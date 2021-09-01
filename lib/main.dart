@@ -1,23 +1,22 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'Homepage/HomePage.dart';
-import 'ProfilePage/ProfilePage.dart';
 
-void main() {
-  runApp(MyApp());
+import 'package:datingapp/google signin/login.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MaterialApp(
+    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      theme: ThemeData(
-        
-        primarySwatch: Colors.blue,
-      ),
-      home: ProfilePage(),
-    );
+    return LoginScreen();
   }
 }
 

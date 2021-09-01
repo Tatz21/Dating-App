@@ -15,14 +15,14 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         elevation: 0,
         leading: Padding(
-          padding: const EdgeInsets.only(left: 
-          10),
+          padding: const EdgeInsets.only(left: 10),
           child: IconButton(icon: Icon(Icons.sort), onPressed: () {}),
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: IconButton(icon: Icon(Icons.notifications_none), onPressed: () {}),
+            child: IconButton(
+                icon: Icon(Icons.notifications_none), onPressed: () {}),
           )
         ],
         title: Padding(
@@ -63,7 +63,6 @@ class _HomePageState extends State<HomePage> {
               height: 50,
               child: TextField(
                 decoration: InputDecoration(
-                  
                     prefixIcon: IconButton(
                         icon: Icon(
                           Icons.search,
@@ -88,9 +87,7 @@ class _HomePageState extends State<HomePage> {
                         const Radius.circular(21.0),
                       ),
                     ),
-                    
                     filled: true,
-                    
                     hintStyle: new TextStyle(color: Colors.white),
                     hintText: "Find Partner",
                     fillColor: Color(0xff14232F)),
@@ -193,7 +190,12 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                       color: Color(0xff143444),
                       borderRadius: BorderRadius.circular(7)),
-                  child: IconButton(icon: Icon(Icons.clear,color: Colors.red,), onPressed: () {}),
+                  child: IconButton(
+                      icon: Icon(
+                        Icons.clear,
+                        color: Colors.red,
+                      ),
+                      onPressed: () {}),
                 ),
                 Container(
                   height: 60,
@@ -201,7 +203,9 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                       color: Color(0xff55CBE3),
                       borderRadius: BorderRadius.circular(17)),
-                  child: IconButton(icon: Icon(Icons.favorite,color: Colors.white), onPressed: () {}),
+                  child: IconButton(
+                      icon: Icon(Icons.favorite, color: Colors.white),
+                      onPressed: () {}),
                 ),
                 Container(
                   height: 40,
@@ -209,7 +213,12 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                       color: Color(0xff143444),
                       borderRadius: BorderRadius.circular(7)),
-                  child: IconButton(icon: Icon(Icons.star,color: Colors.white,), onPressed: () {}),
+                  child: IconButton(
+                      icon: Icon(
+                        Icons.star,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {}),
                 ),
               ],
             ),
@@ -219,14 +228,26 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(20.0),
         padding: EdgeInsets.all(1),
-        decoration: BoxDecoration(color: Color(0xff14232F),borderRadius:BorderRadius.circular(15)),
+        decoration: BoxDecoration(
+            color: Color(0xff14232F), borderRadius: BorderRadius.circular(15)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(icon: Icon(Icons.home,color: Color(0xff54C9E2),), onPressed: () {}),
-            IconButton(icon: Icon(Icons.maps_ugc,color: Color(0xff54C9E2)), onPressed: () {}),
-            IconButton(icon: Icon(Icons.favorite_border,color: Color(0xff54C9E2)), onPressed: () {}),
-            IconButton(icon: Icon(Icons.widgets,color: Color(0xff54C9E2)), onPressed: () {}),
+            IconButton(
+                icon: Icon(
+                  Icons.home,
+                  color: Color(0xff54C9E2),
+                ),
+                onPressed: () {}),
+            IconButton(
+                icon: Icon(Icons.maps_ugc, color: Color(0xff54C9E2)),
+                onPressed: () {}),
+            IconButton(
+                icon: Icon(Icons.favorite_border, color: Color(0xff54C9E2)),
+                onPressed: () {}),
+            IconButton(
+                icon: Icon(Icons.widgets, color: Color(0xff54C9E2)),
+                onPressed: () {}),
           ],
         ),
       ),
